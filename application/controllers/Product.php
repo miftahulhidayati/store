@@ -70,6 +70,16 @@ class Product extends CI_Controller
             $this->load->view('product/view', $data);
         }
     }
+    public function list_product()
+    {
+        $products = $this->db->query("SELECT A.*, B.NAME AS CATEGORY_NAME FROM MS_PRODUCT A JOIN MS_CATEGORY_PRODUCT B ON A.ID_CATEGORY_PRODUCT = B.ID_CATEGORY_PRODUCT ORDER BY A.PRICE ASC")->result_array();
+        $data = array(
+            'menu_name' => 'List Product',
+            'back' => base_url(''),
+            'products' => $products
+        );
+        $this->load->view('product/list_product', $data);
+    }
     public function getDataTable()
     {
         if (empty($_SESSION['iduser'])) {
