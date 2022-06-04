@@ -1,0 +1,29 @@
+<link href="<?php echo base_url(); ?>assets/treeview/css/style.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+  .jstree-grid-separator-regular{
+      border-color: #dcdcdc !important;
+  }
+  .jstree-grid-header-regular {
+      background: #e6e6e6 !important;
+      border-radius: 2px;
+  }
+  .jstree-grid-column {
+      text-align: center;
+  }
+  .jstree-grid-column:first-child {
+      text-align: unset;
+  }
+  .jstree-grid-header-last {
+      color: transparent;
+  }
+  .jstree-grid-cell-last{
+      padding: 0px !important;
+  }
+</style>
+
+
+
+<script src="<?php echo base_url(); ?>assets/treeview/js/jstree.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/treeview/js/jstreegrid.js"></script>
+<script src="<?php echo base_url(); ?>assets/treeview/js/treebase.js"></script>
